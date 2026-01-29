@@ -1,0 +1,6 @@
+claude-opencode-proxy
+./claude-opencode-proxy
+certs/*.pem
+cloudflared/*
+config.json
+auth/*
