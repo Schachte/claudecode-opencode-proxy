@@ -1,6 +1,8 @@
 # Claude Opencode Proxy
 
-Proxy for Claude Code CLI to use OpenCode, Cloudflare AI Gateway, or direct Anthropic API.
+Proxy for Claude Code CLI tSet your provider configo use OpenCode, Cloudflare AI Gateway, or direct Anthropic API.
+
+![screenshot.png](screenshot.png)
 
 ## Build
 _Step 0: Build_
