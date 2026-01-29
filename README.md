@@ -7,14 +7,11 @@ Proxy for Claude Code CLI tSet your provider configo use OpenCode, Cloudflare AI
 ## Build
 _Step 0: Build_
 
-```bash
-go build -o claude-opencode-proxy
-```
-
 ### Add to PATH (optional)
 ```bash
 make install
-# or manually: sudo mv claude-opencode-proxy /usr/local/bin/
+# or go build -o claude-opencode-proxy
+# then manually: sudo mv claude-opencode-proxy /usr/local/bin/
 ```
 
 ## Providers
@@ -22,18 +19,18 @@ _Step 1: Set your provider config_
 
 ### OpenCode Server
 ```bash
-./claude-opencode-proxy config --target https://opencode.example.com/anthropic --login-url https://opencode.example.com
-./claude-opencode-proxy login
+claude-opencode-proxy config --target https://opencode.example.com/anthropic --login-url https://opencode.example.com
+claude-opencode-proxy login
 ```
 
 ### Direct Anthropic API
 ```bash
-./claude-opencode-proxy config --target https://api.anthropic.com/v1 --api-key sk-ant-xxx
+claude-opencode-proxy config --target https://api.anthropic.com/v1 --api-key sk-ant-xxx
 ```
 
 ### Cloudflare AI Gateway
 ```bash
-./claude-opencode-proxy config --target https://gateway.ai.cloudflare.com/v1/ACCOUNT/GATEWAY/anthropic --api-key sk-ant-xxx
+claude-opencode-proxy config --target https://gateway.ai.cloudflare.com/v1/ACCOUNT/GATEWAY/anthropic --api-key sk-ant-xxx
 ```
 
 ## Run
@@ -42,13 +39,13 @@ _Step 2: Run Claude Code via Proxy_
 ```bash
 # Step 1. Pick a provider (see above)
 # Step 2. Run these commands:
-./claude-opencode-proxy login
+claude-opencode-proxy login
 
 # Swaps from Claude Code API -> Custom Provider
-./claude-opencode-proxy enable
+claude-opencode-proxy enable
 
 # Runs Claude Code with Provider
-./claude-opencode-proxy run
+claude-opencode-proxy run
 
 # OR run Claude Code directly
 ANTHROPIC_BASE_URL=http://127.0.0.1:8787 claude
@@ -59,8 +56,8 @@ ANTHROPIC_BASE_URL=http://127.0.0.1:8787 claude
 To stop using the proxy and restore Claude's native auth:
 
 ```bash
-./claude-opencode-proxy stop
-./claude-opencode-proxy disable
+claude-opencode-proxy stop
+claude-opencode-proxy disable
 claude /login
 ```
 
