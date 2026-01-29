@@ -7,7 +7,14 @@ Proxy for Claude Code CLI tSet your provider configo use OpenCode, Cloudflare AI
 ## Build
 _Step 0: Build_
 
-`go build -o claude-opencode-proxy`
+```bash
+go build -o claude-opencode-proxy
+```
+
+### Add to PATH (optional)
+```bash
+sudo mv claude-opencode-proxy /usr/local/bin/
+```
 
 ## Providers
 _Step 1: Set your provider config_
