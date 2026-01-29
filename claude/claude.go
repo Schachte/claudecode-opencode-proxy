@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/schachte/claude-opencode-proxy/config"
+	"github.com/schachte/claudecode-opencode-proxy/config"
 )
 
 var (

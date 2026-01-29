@@ -16,9 +16,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/schachte/claude-opencode-proxy/claude"
-	"github.com/schachte/claude-opencode-proxy/config"
-	"github.com/schachte/claude-opencode-proxy/proxy"
+	"github.com/schachte/claudecode-opencode-proxy/claude"
+	"github.com/schachte/claudecode-opencode-proxy/config"
+	"github.com/schachte/claudecode-opencode-proxy/proxy"
 )
 
 var lastAuthChoiceFile = filepath.Join(config.ConfigDir, "last-auth-choice")

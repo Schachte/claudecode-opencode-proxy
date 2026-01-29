@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/schachte/claude-opencode-proxy/config"
+	"github.com/schachte/claudecode-opencode-proxy/config"
 )
 
 func Run(port int, bindAddr string, verbose bool, quiet bool) {

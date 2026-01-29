@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/schachte/claude-opencode-proxy/cmd"
+	"github.com/schachte/claudecode-opencode-proxy/cmd"
 )
 
 func main() {
