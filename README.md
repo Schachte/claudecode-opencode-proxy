@@ -13,7 +13,8 @@ go build -o claude-opencode-proxy
 
 ### Add to PATH (optional)
 ```bash
-sudo mv claude-opencode-proxy /usr/local/bin/
+make install
+# or manually: sudo mv claude-opencode-proxy /usr/local/bin/
 ```
 
 ## Providers

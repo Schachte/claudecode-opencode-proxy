@@ -5,12 +5,17 @@ PORT := 8787
 TARGET ?=
 LOGIN_URL ?=
 
-.PHONY: all build config login enable run serve stop status clean help
+.PHONY: all build install config login enable run serve stop status clean help
 
 build:
 	@echo "Building $(BINARY)..."
 	go build -o $(BINARY) .
 	@echo "Done: ./$(BINARY)"
+
+install: build
+	@echo "Installing $(BINARY) to /usr/local/bin..."
+	sudo mv $(BINARY) /usr/local/bin/
+	@echo "Done: $(BINARY) is now available in PATH"
 
 config:
 ifndef TARGET
@@ -79,6 +84,7 @@ help:
 	@echo ""
 	@echo "Usage:"
 	@echo "  make build                                    Build the binary"
+	@echo "  make install                                  Build and install to /usr/local/bin"
 	@echo "  make config TARGET=<url> LOGIN_URL=<url>     Configure for OpenCode auth"
 	@echo "  make config-apikey TARGET=<url> API_KEY=<key> Configure for API key auth"
 	@echo "  make login                                    Login to OpenCode"
